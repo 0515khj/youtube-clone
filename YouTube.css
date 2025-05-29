@@ -98,7 +98,7 @@ main {margin-left: 240px;
 .top .topBtn {background: #999; border-radius: 8px; color: #fff;}
 .mainCon1{ }
 .mainCon1 .videoList{display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 10px;}
-.mainCon1 .videoList li{ width: 400px; margin-bottom: 30px;}
+.mainCon1 .videoList li{ width: 430px; margin-bottom: 30px;}
 .mainCon1 .videoList li p{width: 100%;}
 .mainCon1 .videoList li .views::after {
     content: '•';
@@ -106,7 +106,7 @@ main {margin-left: 240px;
     margin: 0 4px;
 }
 .mainCon1 .videoList li .mainProfile {display: flex;}
-.mainCon1 .videoList li img{ width: 400px; border-radius: 8px; transition: 0.7s;}
+.mainCon1 .videoList li img{ width: 430px; border-radius: 8px; transition: 0.7s;}
 .mainCon1 .videoList li img:hover{border-radius:inherit;  }
 .mainCon1 .videoList li div .circleBtn{ width: 40px; height: 40px;
     border: 1px solid #999;
