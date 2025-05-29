@@ -1,0 +1,117 @@
+html, body {
+    height: 100%;
+    overflow-y: auto;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 50px;
+  max-width: 1920px; /* 전체 폭 제한 (선택) */
+}
+
+/* header zone */
+#header { display: flex;  justify-content: space-between;
+    height: 80px;  
+    line-height: 4;
+    position: fixed; top: 0; left: 50px; right: 50px;
+    background: #fff; 
+}
+#header button {height: 33px;}
+
+form {position: relative;}
+form input {width: 400px; height: 30px; border-radius: 20px;
+border: 1px solid #bdbdbd; padding-left: 10px;
+}
+form button {
+    cursor: pointer;
+    width: 70px;
+    /* z-index: 10; */
+    position: absolute; right: 0; top: 18px;
+    background: #EEEEEE;
+    border: 1px solid #bdbdbd;
+    border-top-right-radius:20px ;
+    border-bottom-right-radius:20px ;
+ }
+/* header zone */
+
+/* layout zone */
+
+.layout { display: flex;  }
+
+
+/* layout zone ------------------ */
+
+/* aside zone */
+
+aside {
+    width: 240px;
+    position: fixed;
+    top: 80px;
+    left: 40px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+}
+aside::-webkit-scrollbar { width: 0;}
+aside:hover {
+    scrollbar-width: thin;
+}
+
+
+aside ul li { width:200px ; height: 40px;
+display: flex; align-items: center;
+padding-left: 10px;
+cursor: pointer;
+}
+aside ul{width: 200px;}
+aside ul li i {margin-right: 20px;}
+aside ul li:hover {background: #eeeeee; border-radius: 8px;}
+.clickBtn {
+    background: #eeeeee; border-radius: 8px;
+}
+
+.side {border-bottom: 1px solid #999;
+padding-bottom: 10px; margin-bottom: 10px;
+}
+.side .firstLi {font-weight: 500; font-size: 17px;}
+
+/* aside zone ------------------- */
+
+
+/* main zone */
+
+main {margin-left: 240px;
+    padding: 120px 20px 20px 20px;
+    width: 100%; 
+    }
+
+.top{position: fixed; top: 80px; height: 50px;
+    width: 80%;
+    z-index: 10;
+    background: #fff;
+    display: flex;
+    align-items: first baseline;
+    gap: 10px;
+}
+.top button { background: #eeeeee; border: none; 
+    width: 100%; max-width: 70px;
+    height: 30px; font-weight:550;
+    border-radius: 8px;}
+.top .topBtn {background: #999; border-radius: 8px; color: #fff;}
+.mainCon1{ }
+.mainCon1 .videoList{display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 10px;}
+.mainCon1 .videoList li{ width: 400px; margin-bottom: 30px;}
+.mainCon1 .videoList li p{width: 100%;}
+.mainCon1 .videoList li .views::after {
+    content: '•';
+    display: inline-block;
+    margin: 0 4px;
+}
+.mainCon1 .videoList li .mainProfile {display: flex;}
+.mainCon1 .videoList li img{ width: 400px; border-radius: 8px; transition: 0.7s;}
+.mainCon1 .videoList li img:hover{border-radius:inherit;  }
+.mainCon1 .videoList li div .circleBtn{ width: 40px; height: 40px;
+    border: 1px solid #999;
+    margin-right: 10px; border-radius: 50%;}
+
+
+/* main zone  ------------------ */
+
