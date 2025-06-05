@@ -5,7 +5,17 @@ const $videoList = document.querySelector('.videoList');
 const $mainTop = document.querySelector('.top');
 const $asideLi = document.querySelectorAll('.side ul li');
 const $videoSearch = document.querySelector('.videoSearch');
+const $secondBtn = document.querySelector('.secondBtn');
+const $tooltip = document.querySelector('.tooltip');
 
+let khj = 10;
+
+$secondBtn.addEventListener('mouseenter',e=>{
+    $tooltip.style.display = 'block'
+});
+$secondBtn.addEventListener('mouseleave',e=>{
+    $tooltip.style.display = 'none'
+});
 
 async function mainTop() {
     const reponse = await fetch('./youtube.json');
@@ -48,6 +58,7 @@ $asideLi.forEach(li =>{
 
 let allData = [];
 
+/* 초기화면 및 렌더링  */
 const fetchVideo = async() =>{
     const reponse = await fetch('./youtube.json');
     const data = await reponse.json();
@@ -103,6 +114,26 @@ const renderVideo = async(videos) =>{
         
     })
 }
+
+/* 검색 */
+$videoSearch.addEventListener('keydown',async(e)=>{
+    if(e.key === "Enter"){
+        e.preventDefault();
+        const searchValue = $videoSearch.value.toLowerCase();
+
+        /* 값없으면 동작 x */
+        if(!searchValue){
+            return;
+        }
+        const searchFilter = allData.filter(a => 
+            a.title.toLowerCase().includes(searchValue) ||
+            a.channel.toLowerCase().includes(searchValue) ||
+            a.type.toLowerCase().includes(searchValue) 
+        );
+        console.log('검색 결과:', searchFilter); // 여기 추가
+        renderVideo(searchFilter);
+    }
+})
 
 mainTop();
 fetchVideo();

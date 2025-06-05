@@ -31,6 +31,29 @@ form button {
     border-top-right-radius:20px ;
     border-bottom-right-radius:20px ;
  }
+
+ .right {display: flex; justify-content: center; align-items: center;
+    gap: 10px;
+    
+}
+ .right button {background: none; border: none; font-size: 17px; cursor: pointer;}
+ .right .firstBtn {background: #eeeeee; border-radius: 20px;
+    width: 90px;
+}
+.right .firstBtn:hover { background: #e5e5e5;
+}
+.right .secondBtn {font-size: 20px;width: 35px; height: 50px;}
+.right .secondBtn:hover {border-radius: 50%; background: #e5e5e5;}
+.tooltip {
+    display: none;
+    font-size: 15px;
+    background: #e5e5e5;
+    position: fixed; top: 70px; right: 96px;
+     padding: 2px 8px;
+    border-radius: 4px;
+    z-index: 10000;
+}
+ .right img {width: 30px;  border-radius: 50%;}
 /* header zone */
 
 /* layout zone */
